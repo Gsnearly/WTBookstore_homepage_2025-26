@@ -1,0 +1,583 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Responsive Header + Fixed Mobile Menu • Bootstrap 5</title>
+
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+  <link href="style.css" rel="stylesheet">
+</head>
+
+<body>
+
+  <header class="py-2 py-md-3">
+    <div class="container">
+      <div class="row align-items-center g-2 g-md-3">
+        <!-- Social icons (desktop only) -->
+        <div class="col-md-4 d-none d-md-flex justify-content-md-start social-icons">
+          <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+          <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+        </div>
+
+        <!-- Centered logo -->
+        <div class="col-12 col-md-4 text-center">
+          <img src="https://gphotography1002.org/wp-content/uploads/2025/10/Bookstore_Logo.png" alt="Bookstore Logo"
+            class="logo img-fluid mx-auto d-block">
+        </div>
+
+        <!-- Account & Cart (desktop only) -->
+        <div class="col-md-4 d-none d-md-flex justify-content-md-end align-items-center gap-3">
+          <a href="https://www.wtbookstore.com/login" class="text-white text-decoration-none"><i
+              class="bi bi-person me-1"></i> Login</a>
+          <a href="https://www.wtbookstore.com/ShoppingCart"
+            class="text-white text-decoration-none position-relative"><i class="bi bi-cart me-1"></i> Cart</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark menu-bar">
+    <div class="container">
+
+      <!-- MOBILE HEADER ROW (inside navbar, only visible on < lg) -->
+      <div class="d-flex d-lg-none w-100 align-items-center justify-content-between py-1">
+        <!-- Left: toggler -->
+        <button class="navbar-toggler me-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- Center: optional label (can remove) -->
+        <span class="navbar-text text-white small flex-grow-1 text-center"></span>
+        <!-- Right: (keep empty so toggler stays left and layout balanced) -->
+        <span class="d-inline-block" style="width:32px;height:32px;"></span>
+      </div>
+
+      <!-- COLLAPSE AREA -->
+      <div class="collapse navbar-collapse w-100" id="navbarNav">
+        <!-- Main nav: left on desktop, left on mobile by default -->
+        <ul class="navbar-nav left-menu">
+          <li class="nav-item px-lg-3"><a class="nav-link menu-item-color active" href="index.html">Home</a></li>
+          <li class="nav-item px-lg-3"><a class="nav-link menu-item-color" href="#">Order Books</a></li>
+          <!-- Dropdown -->
+          <li class="nav-item dropdown px-lg-3">
+            <a class="nav-link menu-item-color dropdown-toggle" href="#" id="shopDropdown" role="button"
+              data-bs-toggle="dropdown" aria-expanded="false">Shop</a>
+            <ul class="dropdown-menu" aria-labelledby="shopDropdown">
+              <li><a class="dropdown-item" href="men.html">Men's Clothing</a></li>
+              <li><a class="dropdown-item" href="women.html">Wommen's Clothing</a></li>
+              <li><a class="dropdown-item" href="little.html">Little Buffs</a></li>
+              <li><a class="dropdown-item" href="alumni.html">Alumni Clothing</a></li>
+              <li><a class="dropdown-item" href="t-shirts.html">T-Shirts</a></li>
+              <li><a class="dropdown-item" href="caps.html">Caps & Beanies</a></li>
+              <li><a class="dropdown-item" href="#">Vero Clothing</a></li>
+              <li><a class="dropdown-item" href="#">Nursing Clothing</a></li>
+            </ul>
+          </li>
+          <!-- Dropdown -->
+          <li class="nav-item dropdown px-lg-3">
+            <a class="nav-link menu-item-color dropdown-toggle" href="#" id="shopDropdown" role="button"
+              data-bs-toggle="dropdown" aria-expanded="false">School Supplies</a>
+            <ul class="dropdown-menu" aria-labelledby="shopDropdown">
+              <li><a class="dropdown-item" href="#">Lab Materials</a></li>
+              <li><a class="dropdown-item" href="#">School Supplies</a></li>
+            </ul>
+          </li>
+          <!-- Dropdown -->
+          <li class="nav-item dropdown px-lg-3">
+            <a class="nav-link menu-item-color dropdown-toggle" href="#" id="shopDropdown" role="button"
+              data-bs-toggle="dropdown" aria-expanded="false">Technolgy</a>
+            <ul class="dropdown-menu" aria-labelledby="shopDropdown">
+              <li><a class="dropdown-item" href="#">Apple Merchandise</a></li>
+              <li><a class="dropdown-item" href="#">Tech Sale</a></li>
+            </ul>
+          </li>
+          <!-- Dropdown -->
+          <li class="nav-item dropdown px-lg-3">
+            <a class="nav-link menu-item-color dropdown-toggle" href="#" id="shopDropdown" role="button"
+              data-bs-toggle="dropdown" aria-expanded="false">Spirit Items</a>
+            <ul class="dropdown-menu" aria-labelledby="shopDropdown">
+              <li><a class="dropdown-item" href="#">Cups & Mugs</a></li>
+              <li><a class="dropdown-item" href="#">Decals</a></li>
+              <li><a class="dropdown-item" href="#">Ornaments</a></li>
+              <li><a class="dropdown-item" href="#">Wooden Buffaloes</a></li>
+              <li><a class="dropdown-item" href="#">Buffaloes & Accessories</a></li>
+              <li><a class="dropdown-item" href="#">Bags & Totes</a></li>
+              <li><a class="dropdown-item" href="#">Home & Office</a></li>
+              <li><a class="dropdown-item" href="#">Blankets</a></li>
+            </ul>
+          </li>
+          <li class="nav-item px-lg-3"><a class="nav-link menu-item-color" href="graduation.html">Graduation</a></li>
+
+          <!-- Mobile-only: account/cart -->
+          <li class="nav-item d-lg-none mt-3"><a class="nav-link" href="#"><i class="bi bi-person me-2"></i>Login</a>
+          </li>
+          <li class="nav-item d-lg-none"><a class="nav-link" href="#"><i class="bi bi-cart me-2"></i>Cart</a>
+          </li>
+        </ul>
+
+        <!-- Desktop-only: search placeholder on far right -->
+        <div class="ms-lg-auto d-none d-lg-block">
+          <span id="search-placeholder">[ Search bar goes here ]</span>
+        </div>
+
+        <!-- Mobile-only: social icons centered at bottom of collapse -->
+        <div class="d-lg-none mt-4 text-center social-icons w-100">
+          <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+          <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Slider -->
+  <div id="bookstoreHero" class="carousel slide carousel-fade" data-bs-ride="carousel">
+    <!-- Indicators -->
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#bookstoreHero" data-bs-slide-to="0" class="active" aria-current="true"
+        aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#bookstoreHero" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#bookstoreHero" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+
+    <!-- Slides -->
+    <div class="carousel-inner">
+      <!-- Slide 1 -->
+      <div class="carousel-item active text-white"
+        style="background: url('https://gphotography1002.org/wp-content/uploads/2025/10/DSC0011-1-scaled.jpg') center/cover; height: 80vh;">
+        <div class="container h-100 d-flex flex-column justify-content-center align-items-start">
+          <div class="bg-dark bg-opacity-75 p-4 rounded">
+            <h1 class="display-4 fw-bold">Welcome to the WT Bookstore</h1>
+            <p class="lead mb-3">Textbooks, spirit wear, and everything you need for campus life.</p>
+            <a href="#shop" class="btn hero_btn btn-lg">Shop Now</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 2 -->
+      <div class="carousel-item text-white"
+        style="background: url('https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?auto=format&fit=crop&w=1600&q=60') center/cover; height: 80vh;">
+        <div class="container h-100 d-flex flex-column justify-content-center align-items-start">
+          <div class="bg-dark bg-opacity-50 p-4 rounded">
+            <h1 class="display-4 fw-bold">Show Your School Spirit</h1>
+            <p class="lead mb-3">Grab official apparel and accessories for every student and alumni.</p>
+            <a href="#merch" class="btn hero_btn btn-lg">Shop Merchandise</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 3 -->
+      <div class="carousel-item text-white"
+        style="background: url('https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?auto=format&fit=crop&w=1600&q=60') center/cover; height: 80vh;">
+        <div class="container h-100 d-flex flex-column justify-content-center align-items-start">
+          <div class="bg-dark bg-opacity-50 p-4 rounded">
+            <h1 class="display-4 fw-bold">Get Ready for the Semester</h1>
+            <p class="lead mb-3">Find notebooks, tech gear, and supplies to power your studies.</p>
+            <a href="#supplies" class="btn hero_btn btn-lg">Explore Supplies</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Controls -->
+    <button class="carousel-control-prev" type="button" data-bs-target="#bookstoreHero" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#bookstoreHero" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+  <!-- Simple Call to Action Section -->
+  <section class="py-5 call_to_action text-center">
+    <div class="container">
+      <h2 class="fw-bold mb-3">Need to Get in Touch with the Bookstore?</h2>
+      <p class=" mb-4">Order your books, send us an email, or give us a call — we’re here to help!</p>
+
+      <div class="d-flex flex-column flex-md-row justify-content-center gap-3">
+        <a href="#order-books" class="btn call_btn btn-lg px-4">Order Books</a>
+        <a href="mailto:bookstore@university.edu" class="btn call_btn btn-lg px-4">Send Email</a>
+        <a href="tel:+11234567890" class="btn call_btn btn-lg px-4">Call Bookstore</a>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- Modern Graduation Section -->
+  <section class="py-5 position-relative overflow-hidden"
+    style="background: linear-gradient(135deg, #f8f9fa 0%, #e8ecf3 100%);">
+    <div class="container text-center position-relative" style="z-index: 2;">
+      <!-- Heading -->
+      <h2 class="fw-bold display-5 mb-3 text-dark">Celebrate Your Graduation in Style</h2>
+      <p class="lead text-muted mb-5">
+        From the walk across the stage to memories that last a lifetime — find everything you need for graduation day.
+      </p>
+
+      <!-- Cards Row -->
+      <div class="row g-4">
+        <!-- Card 1 -->
+        <div class="col-md-4">
+          <div class="card border-0 shadow-sm h-100 rounded-4 overflow-hidden transition-all hover-shadow-lg">
+            <div class="overflow-hidden">
+              <img src="https://gphotography1002.org/wp-content/uploads/2025/10/54-1156702-3.jpg"
+                class="card-img-top img-fluid" alt="Caps and Gowns" style="transition: transform 0.5s;">
+            </div>
+            <div class="card-body py-4">
+              <h5 class="fw-semibold mb-2">Caps & Gowns</h5>
+              <p class="text-muted mb-4">Look your best on graduation day with official university regalia.</p>
+              <a href="#caps-gowns" class="btn hero_btn rounded-pill px-4">Shop Now</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="col-md-4">
+          <div class="card border-0 shadow-sm h-100 rounded-4 overflow-hidden transition-all hover-shadow-lg">
+            <div class="overflow-hidden">
+              <img src="https://gphotography1002.org/wp-content/uploads/2025/10/54-1632289-1.png"
+                class="card-img-top img-fluid" alt="Graduation Gifts" style="transition: transform 0.5s;">
+            </div>
+            <div class="card-body py-4">
+              <h5 class="fw-semibold mb-2">Graduation Gifts</h5>
+              <p class="text-muted mb-4">Share the joy of accomplishment with timeless, meaningful gifts.</p>
+              <a href="#gifts" class="btn hero_btn rounded-pill px-4">Browse Gifts</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="col-md-4">
+          <div class="card border-0 shadow-sm h-100 rounded-4 overflow-hidden transition-all hover-shadow-lg">
+            <div class="overflow-hidden">
+              <img src="https://gphotography1002.org/wp-content/uploads/2025/10/Frame-scaled.jpg"
+                class="card-img-top img-fluid" alt="Diploma Frames" style="transition: transform 0.5s;">
+            </div>
+            <div class="card-body py-4">
+              <h5 class="fw-semibold mb-2">Diploma Frames</h5>
+              <p class="text-muted mb-4">Preserve your achievement with modern and classic frame designs.</p>
+              <a href="#frames" class="btn hero_btn rounded-pill px-4">View Frames</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CTA Button -->
+      <div class="mt-5">
+        <a href="graduation.html" class="btn hero_btn btn-lg rounded-pill px-5 py-3 shadow-sm">
+          🎓 Visit the Graduation Shop
+        </a>
+      </div>
+    </div>
+
+    <!-- Decorative Background -->
+    <div class="position-absolute top-0 start-0 w-100 h-100"
+      style="background: radial-gradient(circle at 30% 20%, rgba(13,110,253,0.05), transparent 60%); z-index:1;">
+    </div>
+  </section>
+
+  <!-- Simple Apple Tech Section -->
+  <section class="py-5 bg-light text-center">
+    <div class="container">
+      <h2 class="fw-bold mb-3">Apple Products Available</h2>
+      <p class="text-muted mb-5">Shop the latest Mac, iPad, and accessories at student pricing.</p>
+
+
+      <!-- Cards Row -->
+      <div class="row g-4">
+        <!-- Macs -->
+        <div class="col-md-4">
+          <div class="card border-0 shadow-sm h-100 rounded-4 overflow-hidden transition-all hover-shadow-lg">
+            <div class="overflow-hidden">
+              <img src="https://gphotography1002.org/wp-content/uploads/2025/10/mac.png" class="card-img-top img-fluid"
+                alt="Caps and Gowns" style="transition: transform 0.5s;">
+            </div>
+            <div class="card-body py-4">
+              <h5 class="fw-semibold mb-2">MacBook Air</h5>
+              <p class="text-muted mb-4">Lightweight performance for students.</p>
+              <a href="#caps-gowns" class="btn hero_btn rounded-pill px-4">Shop Now</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- IPads -->
+        <div class="col-md-4">
+          <div class="card border-0 shadow-sm h-100 rounded-4 overflow-hidden transition-all hover-shadow-lg">
+            <div class="overflow-hidden">
+              <img src="https://gphotography1002.org/wp-content/uploads/2025/10/IPAD.png" class="card-img-top img-fluid"
+                alt="Graduation Gifts" style="transition: transform 0.5s;">
+            </div>
+            <div class="card-body py-4">
+              <h5 class="fw-semibold mb-2">iPad</h5>
+              <p class="text-muted mb-4">Powerful, portable, and easy to use.</p>
+              <a href="#gifts" class="btn hero_btn rounded-pill px-4">Shop Now</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Air Pods -->
+        <div class="col-md-4">
+          <div class="card border-0 shadow-sm h-100 rounded-4 overflow-hidden transition-all hover-shadow-lg">
+            <div class="overflow-hidden">
+              <img src="https://gphotography1002.org/wp-content/uploads/2025/10/air_pod-scaled.png"
+                class="card-img-top img-fluid" alt="Diploma Frames" style="transition: transform 0.5s;">
+            </div>
+            <div class="card-body py-4">
+              <h5 class="fw-semibold mb-2">AirPods</h5>
+              <p class="text-muted mb-4">Wireless listening made effortless.</p>
+              <a href="#frames" class="btn hero_btn rounded-pill px-4">Shop Now</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-5">
+        <a href="#apple-shop" class="btn hero_btn btn-lg px-5">Shop All Apple Products</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Categories Section -->
+  <section class="py-5 bg-light" style="background: linear-gradient(135deg, #f8f9fa 0%, #e8ecf3 100%);">
+    <div class="container text-center">
+      <h2 class="fw-bold mb-4">Shop by Category</h2>
+      <p class="text-muted mb-5">Find your favorite campus gear, study essentials, and more.</p>
+
+      <div class="row g-4">
+        <!-- Category 1 -->
+
+        <div class="col-12 col-sm-6 col-lg-3">
+          <div class="card border-0 shadow-sm h-100 rounded-4 overflow-hidden transition-all hover-shadow-lg">
+            <div class="overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f" class="card-img-top"
+                style="transition: transform 0.5s;" alt="Apparel">
+            </div>
+
+            <div class="card-body">
+              <h5 class="card-title fw-semibold">Men's Clothing</h5>
+              <p class="card-text text-muted">T-shirts, hoodies, and outerwear to show your school pride.</p>
+              <a href="#" class="btn hero_btn_outline btn-sm rounded-pill">Shop Now</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Category 2 -->
+        <div class="col-12 col-sm-6 col-lg-3">
+          <div class="card border-0 shadow-sm h-100 rounded-4 overflow-hidden transition-all hover-shadow-lg">
+            <div class="overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1511974035430-5de47d3b95da" class="card-img-top"
+                style="transition: transform 0.5s;" alt="Accessories">
+            </div>
+
+            <div class="card-body">
+              <h5 class="card-title fw-semibold">Women's Clothing</h5>
+              <p class="card-text text-muted">Hats, mugs, keychains, and more campus favorites.</p>
+              <a href="#" class="btn hero_btn_outline btn-sm rounded-pill">Shop Now</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Category 3 -->
+        <div class="col-12 col-sm-6 col-lg-3">
+          <div class="card border-0 shadow-sm h-100 rounded-4 overflow-hidden transition-all hover-shadow-lg">
+            <div class="overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1511974035430-5de47d3b95da" class="card-img-top"
+                style="transition: transform 0.5s;" alt="School Supplies">
+            </div>
+
+            <div class="card-body">
+              <h5 class="card-title fw-semibold">Little Buffs</h5>
+              <p class="card-text text-muted">Notebooks, pens, calculators, and all your class essentials.</p>
+              <a href="#" class="btn hero_btn_outline btn-sm rounded-pill">Shop Now</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Category 4 -->
+        <div class="col-12 col-sm-6 col-lg-3">
+          <div class="card border-0 shadow-sm h-100 rounded-4 overflow-hidden transition-all hover-shadow-lg">
+            <div class="overflow-hidden">
+              <img src="https://gphotography1002.org/wp-content/uploads/2025/10/54-1791478-1-1.png" class="card-img-top"
+                style="transition: transform 0.5s;" alt="Tech & Gadgets">
+            </div>
+
+            <div class="card-body">
+              <h5 class="card-title fw-semibold">Alumni Clothing</h5>
+              <p class="card-text text-muted">Headphones, chargers, and smart devices for students.</p>
+              <a href="#" class="btn hero_btn_outline btn-sm rounded-pill">Shop Now</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Category 5 -->
+        <div class="col-12 col-sm-6 col-lg-3">
+          <div class="card border-0 shadow-sm h-100 rounded-4 overflow-hidden transition-all hover-shadow-lg">
+            <div class="overflow-hidden">
+              <img src="https://gphotography1002.org/wp-content/uploads/2025/10/54-1801830-1.png" class="card-img-top"
+                style="transition: transform 0.5s;" alt="Tech & Gadgets">
+            </div>
+
+            <div class="card-body">
+              <h5 class="card-title fw-semibold">T-Shirts</h5>
+              <p class="card-text text-muted">Headphones, chargers, and smart devices for students.</p>
+              <a href="#" class="btn hero_btn_outline btn-sm rounded-pill">Shop Now</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Category 6 -->
+        <div class="col-12 col-sm-6 col-lg-3">
+          <div class="card border-0 shadow-sm h-100 rounded-4 overflow-hidden transition-all hover-shadow-lg">
+            <div class="overflow-hidden">
+              <img src="https://gphotography1002.org/wp-content/uploads/2025/10/54-1798969-1.png" class="card-img-top"
+                style="transition: transform 0.5s;" alt="Tech & Gadgets">
+            </div>
+
+            <div class="card-body">
+              <h5 class="card-title fw-semibold">Caps & Beanies</h5>
+              <p class="card-text text-muted">Headphones, chargers, and smart devices for students.</p>
+              <a href="#" class="btn hero_btn_outline btn-sm rounded-pill">Shop Now</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Category 7 -->
+        <div class="col-12 col-sm-6 col-lg-3">
+          <div class="card border-0 shadow-sm h-100 rounded-4 overflow-hidden transition-all hover-shadow-lg">
+            <div class="overflow-hidden">
+              <img src="https://gphotography1002.org/wp-content/uploads/2025/10/54-1754984-1-1.png" class="card-img-top"
+                style="transition: transform 0.5s;" alt="Tech & Gadgets">
+            </div>
+
+            <div class="card-body">
+              <h5 class="card-title fw-semibold">Vero</h5>
+              <p class="card-text text-muted">Headphones, chargers, and smart devices for students.</p>
+              <a href="#" class="btn hero_btn_outline btn-sm rounded-pill">Shop Now</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Category 8 -->
+        <div class="col-12 col-sm-6 col-lg-3">
+          <div class="card border-0 shadow-sm h-100 rounded-4 overflow-hidden transition-all hover-shadow-lg">
+            <div class="overflow-hidden">
+              <img src="https://gphotography1002.org/wp-content/uploads/2025/10/54-1744049-1.jpg" class="card-img-top"
+                style="transition: transform 0.5s;" alt="Tech & Gadgets">
+            </div>
+
+            <div class="card-body">
+              <h5 class="card-title fw-semibold">Nursing</h5>
+              <p class="card-text text-muted">Headphones, chargers, and smart devices for students.</p>
+              <a href="#" class="btn hero_btn_outline btn-sm rounded-pill">Shop Now</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- School Supplies Section -->
+  <section class="py-5 bg-white">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="fw-bold">School Supplies</h2>
+        <p class="text-muted">Everything you need to succeed this semester — from notebooks to tech essentials.</p>
+      </div>
+
+      <!-- Centered Row -->
+      <div class="row g-4 justify-content-center">
+
+        <!-- Item 1 -->
+        <div class="col-12 col-sm-6 col-lg-3">
+          <div class="card h-100 border-0 shadow-sm">
+            <img src="https://images.unsplash.com/photo-1509228468518-180dd4864904" class="card-img-top"
+              alt="Backpacks">
+            <div class="card-body text-center">
+              <h5 class="card-title fw-semibold">Lab Materials</h5>
+              <p class="card-text text-muted">Durable and stylish bags with compartments for every class.</p>
+              <a href="#" class="btn hero_btn_outline btn-sm rounded-pill">Shop All Lab Materials</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 2 -->
+        <div class="col-12 col-sm-6 col-lg-3">
+          <div class="card h-100 border-0 shadow-sm">
+            <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f" class="card-img-top"
+              alt="Pens & Pencils">
+            <div class="card-body text-center">
+              <h5 class="card-title fw-semibold">School Supplies</h5>
+              <p class="card-text text-muted">Smooth-writing pens, mechanical pencils, and colorful markers.</p>
+              <a href="#" class="btn hero_btn_outline btn-sm rounded-pill">Shop All School Supplies</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+<!-- Bootstrap 5 Footer -->
+<footer class="footer_bg text-light pt-5 pb-4">
+  <div class="container">
+    <div class="row text-center text-md-start">
+
+      <!-- Hours Section -->
+      <div class="col-md-4 mb-4">
+        <h5 class="text-uppercase fw-bold mb-3">Hours</h5>
+        <ul class="list-unstyled">
+          <li>Monday – Thursady: 7:30 AM – 6:45 PM</li>
+          <li>Friday: 7:30 AM – 4:15 PM</li>
+          <li>Saturday: 11.00 AM - 2:45 PM</li>
+          <li>Sunday: Closed</li>
+        </ul>
+      </div>
+
+      <!-- Quick Links Section -->
+      <div class="col-md-4 mb-4">
+        <h5 class="text-uppercase fw-bold mb-3">Quick Links</h5>
+        <ul class="list-unstyled">
+          <li><a href="#" class="text-light text-decoration-none d-block mb-1">WTAMU Homepage</a></li>
+          <li><a href="#" class="text-light text-decoration-none d-block mb-1">University Contacts</a></li>
+          <li><a href="#" class="text-light text-decoration-none d-block mb-1">Return Policy</a></li>
+          <li><a href="#" class="text-light text-decoration-none d-block mb-1">University Link Policy & Privacy
+              Statment</a></li>
+          <li><a href="#" class="text-light text-decoration-none d-block mb-1">University Accessibility</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact Section -->
+      <div class="col-md-4 mb-4">
+        <h5 class="text-uppercase fw-bold mb-3">Contact</h5>
+        <ul class="list-unstyled">
+          <li class="mb-2"><i class="bi bi-geo-alt-fill me-2"></i>Shipping Address: 101 25th Street Canyon, TX. 79016
+          </li>
+          <li class="mb-2"><i class="bi bi-geo-alt-fill me-2"></i>Mailing Address: WTAMU PO BOX 60937 Canyon, TX. 79016
+          </li>
+          <li class="mb-2"><i class="bi bi-telephone-fill me-2"></i>(806)-651-2744</li>
+          <li><i class="bi bi-envelope-fill me-2"></i>bookstore@university.edu</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <hr class="border-secondary">
+
+    <div class="text-center">
+      <p class="mb-0 small">© 2025 University Bookstore • All Rights Reserved</p>
+    </div>
+  </div>
+</footer>
+
+</html>

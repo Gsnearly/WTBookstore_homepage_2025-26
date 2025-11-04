@@ -1,0 +1,147 @@
+    header {
+        background-color: #450012;
+        color: #fff;
+    }
+
+    .menu-bar {
+        background-color: #212529;
+    }
+
+    .logo {
+        width: 100%;
+        max-width: 320px;
+        height: auto;
+    }
+
+    @media (min-width: 992px) {
+        .logo {
+            max-width: 420px;
+        }
+    }
+
+    /* Desktop: left-align main nav */
+    @media (min-width: 992px) {
+        .navbar-nav.left-menu {
+            margin-right: auto;
+        }
+    }
+
+    /* Search placeholder styling (desktop only) */
+    #search-placeholder {
+        color: #aaa;
+        font-style: italic;
+        border: 1px dashed #666;
+        padding: 0.4rem 1rem;
+        border-radius: 4px;
+        white-space: nowrap;
+    }
+
+    /* Social links */
+    .social-icons a {
+        color: #fff;
+        font-size: 1.2rem;
+        margin-right: 0.75rem;
+        transition: color 0.3s;
+    }
+
+    .social-icons a:hover {
+        color: #f8d7da;
+    }
+
+    .hero_btn {
+        background-color: #450012;
+        color: #e8ecf3;
+    }
+
+    .hero_btn:hover {
+        border: 2px solid #450012;
+        background-color: #fff;
+        color: #450012;
+    }
+    .hero_btn_outline{
+        border: 1px solid #450012;
+        color: #450012;
+        background-color: #fff;
+    }
+    .hero_btn_outline:hover{
+        background-color: #450012;
+        color:#fff;
+    }
+
+    .menu-item-color {
+        color: #fff;
+    }
+
+    .call_to_action {
+        background-color: #450012;
+        color: #fff;
+    }
+
+    .call_btn {
+        background-color: #450012;
+        color: #fff;
+        border: 2px solid #fff;
+    }
+
+    .call_btn:hover {
+        background-color: #fff;
+        color: #450012;
+        border: 2px solid #fff;
+    }
+
+    .card:hover img {
+        transform: scale(1.05);
+    }
+
+    .card:hover {
+        box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1) !important;
+        transform: translateY(-5px);
+        transition: all 0.3s ease;
+    }
+
+    /* Hero Section Graduation */
+    .hero {
+      background: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
+                  url('https://images.unsplash.com/photo-1596495577886-d920f1fb7238?auto=format&fit=crop&w=1920&q=80') center/cover;
+      color: white;
+      text-align: center;
+      padding: 120px 0;
+    }
+    .hero h1 {
+      font-size: 3rem;
+      font-weight: 700;
+    }
+    .hero p {
+      font-size: 1.2rem;
+      margin-top: 15px;
+    }
+
+    /* Section Headings */
+    .section-title {
+      font-weight: 600;
+      color: #003366;
+      margin-bottom: 1rem;
+    }
+
+    /* Product Cards */
+    .product-card img {
+      border-radius: 0.75rem;
+    }
+    .product-card .card-body {
+      text-align: center;
+    }
+
+    /* CTA Section */
+    .cta-section {
+      background: #212529;
+      color: #fff;
+      padding: 70px 0;
+    }
+    .cta-section a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .footer_bg{
+        background-color: #450012;
+    }
