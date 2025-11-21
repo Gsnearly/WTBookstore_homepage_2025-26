@@ -1,3 +1,9 @@
+   .banner img{
+        width: 100%;
+        height: auto;
+        display: block;
+
+   }
    .tech_shop_page_txt{
         color:#FF0000;
         font-size: 20px;
